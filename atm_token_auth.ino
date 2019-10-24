@@ -87,16 +87,6 @@ void setup() {
   // Tamper detection button
   pinMode(TRIG_TAMPER, INPUT_PULLUP);
   
-  //Serial.begin(9600);
-/*
-  if (! RTC.begin()) {
-    Serial.println("Couldn't find RTC");
-    while (1);
-  }
-  if (! RTC.isrunning()) {
-    Serial.println("RTC is NOT running!");
-  }
-*/
   /* Uncomment this line after setting up the RTC */
   //setupTime();
   
@@ -114,7 +104,7 @@ void setup() {
 
   intTamperSetup();
   initState();
-  // activate I2C and clock
+  // Activate I2C and clock
   Wire.begin();
   RTC.begin();
 }
